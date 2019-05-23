@@ -1,0 +1,530 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body
+{
+    /*background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);*/
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+
+a
+{
+    text-decoration:  none;
+    color: white;
+}
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px;
+    padding: 5px 0;
+    height: 25vw;
+    text-align: center;
+    justify-content: flex-start;
+    background-image: url("../pictures/ui135.png");
+    background-position: 20% 20%;
+}
+
+.nav-menu-container
+{
+    display: flex;
+    justify-content: center;
+    
+}
+.nav-menu
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item
+{
+    
+    margin: 5px;
+    background-color: rgba(240, 248, 255, 0.6);
+}
+
+.nav-item>a
+{
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+}
+
+.nav-item:hover
+{
+    background-color: rgba(240, 248, 255, 0.9);
+}
+
+.header-text-container
+{
+    margin-top: 5vw;
+    padding: 10px 0 5px 0;
+    background-color: rgba(240, 248, 255, 0.6);
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.divider
+{
+    /*padding: 1px;*/
+    height: 2px;
+    background-color: slategray;
+    margin: 30px 100px; 
+}
+
+/*---------------------------------------*/
+
+main
+{
+    margin: 0 120px;
+    padding: 5px;
+
+}
+
+.intro-text
+{
+    text-align: justify;
+    text-indent: 1.5em;
+}
+
+.intro-text h1
+{
+    text-align: right;
+}
+
+.intro-button
+{
+    
+}
+.intro-button>a
+{
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 1vw;
+    padding: 15px;
+    font-size: 20px;
+    background-color: rgb(145, 178, 240);
+    color: black;
+}
+
+.intro-button>a:hover
+{
+    background-color: rgb(97, 122, 168);
+    color: white;
+}
+
+/*---------------------------------------*/
+
+.biomes-menu-text
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.biomes-flexbox
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.biomes-flexbox>div
+{
+    
+    width: 220px;
+    height: 160px;
+    margin: 10px;
+
+}
+
+.biome-menu-item
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+}
+.menu-item-img-container
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu-item-img
+{
+    box-sizing: border-box;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding: 5px;
+}
+
+.menu-item-text-container
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    display: inline-block;
+    text-align:center;
+    width:100%;
+}
+
+.menu-item-text
+{
+    margin: 0px 10%;
+    background-color: grey;
+    padding: 10px; 
+}
+.menu-item-text>h2
+{
+    text-align: center;
+}
+.menu-item-text>h2>a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.biome-menu-item:hover .menu-item-img
+{
+    opacity: 0.3;
+}
+.biome-menu-item:hover .menu-item-text-container
+{
+    opacity: 1;
+}
+
+.menu-item-text:hover
+{
+    background-color: rgb(71, 71, 71);
+    cursor: pointer;
+}
+
+/*---------------------------------------*/
+
+
+.biome-container
+{
+    display: grid;
+    grid-template-areas:
+    'text text text'
+    'creatures creatures image'
+    'creatures creatures button';
+
+    /*height: 700px;*/
+    grid-template-rows: 200px 370px 80px;
+    grid-template-columns: auto auto 38%;
+
+   padding-bottom: 30px;
+
+}
+
+.biome-text-container
+{
+    grid-area: text;
+   /* min-height: 200px;*/
+    display: grid;
+
+    grid-template-rows: 30% auto;
+    grid-template-columns: 40% auto 20%;
+}
+
+.biome-title-text
+{
+    grid-area: title;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    padding: 10px;
+
+}
+.biome-add-text
+{
+    grid-area: additional;
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+    text-align: right;
+
+    padding: 10px;
+
+}
+.biome-descr-text
+{
+    grid-area: description;
+
+    grid-column: 1/4;
+    grid-row: 2/3;
+
+    text-indent: 1.5em;
+    text-align: justify;
+
+    padding: 10px;
+
+    font-size: 1.2em;
+
+}
+
+/*----------------*/
+
+.biome-creature-list-container
+{
+    grid-area: creatures;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+    padding-right: 10px;
+   /* min-height: 300px;*/
+
+}
+
+.biome-creature-list
+{
+    padding: 5px 10px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, slategray, rgba(206, 46, 6, 0)) 1 100%;
+
+}
+
+.biome-creature-title
+{
+    padding: 10px 0px;
+    
+}
+.biome-creature-item
+{
+    list-style: none;
+}
+.creature-info
+{
+    height: 3em;
+    margin: 5px 0px;
+
+    position: relative;
+
+    
+}
+
+.creature-info-icon-container
+{
+    display: inline-block;
+    height: 100%;
+}
+.creature-info-icon
+{
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 3em;
+    max-width: 20%;
+    min-height: 1.5em;
+}
+
+.creature-info-name
+{
+
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+
+
+}
+
+
+/*----------------*/
+
+.biome-img-container
+{
+    grid-area: image;
+   /* min-height: 400px;*/
+    padding: 10px;
+    /*background-color: yellowgreen;*/
+    overflow: hidden;
+   /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+
+}
+.biome-img
+{
+    height: 350px;
+    
+    width: 100%;
+    background-image: url("../pictures/purity.jpg");
+    background-size: cover;
+    background-position-x: 80%;
+}
+
+
+/*----------------*/
+
+.biome-button-container
+{
+    grid-area: button;
+    min-height: 80px;
+
+    position: relative;
+}
+
+.biome-button>a
+{
+    display: inline-block;
+    /*height: 30px;*/
+    padding: 15px;
+    font-size: 1.5em;
+    background-color: rgb(144, 112, 112);
+
+    margin: 5px 5px;
+    
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+
+    text-decoration: none;
+    color: white;
+}
+
+.biome-button :hover
+{
+    background-color: rgb(88, 45, 45);
+}
+
+
+/*---------------------------------------*//*---------------------------------------*/
+
+.biome-text-container .biome-add-text
+{
+    display: none;
+}
+
+.hardmode-biome .biome-add-text
+{
+    display: block;
+}
+/*
+.hardmode-biome .biome-creature-list-container
+{
+    grid-area: creatures;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+
+    align-items: center;  ----------------?????need_or_not???--------------------
+    grid-column-gap: 5%;
+    padding-right: 10px;
+
+}
+
+.hardmode-biome .biome-creature-list
+{
+    padding: 5px 10px;
+    
+    border: none;
+
+}
+.hardmode-biome .center-creature-item
+{
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, slategray, rgba(206, 46, 6, 0)) 1 100%;
+}
+*/
+
+/*---------------------------------------*//*---------------------------------------*/
+
+.hardmode-biome .biome-creature-list-container
+{
+    grid-area: creatures;
+    display: grid;
+    grid-template-columns: 20% 45% 20%;
+
+    grid-column-gap: 5%;
+    padding-right: 10px;
+
+
+}
+
+.hardmode-biome .biome-creature-list
+{
+    grid-column: 2/3;
+}
+
+
+.agressive-biome .biome-creature-list-container
+{
+    grid-area: creatures;
+    display: grid;
+    grid-template-columns: 40% 40%;
+
+    grid-column-gap: 10%;
+    padding-right: 10px;
+
+
+}
+
+/*---------------------------------------*//*---------------------------------------*/
+
+.big-creature
+{
+    height: 6em;  
+}
+
+.big-creature .creature-info-icon
+{
+    max-height: 6em;
+    min-height: 3em;
+}
+
+/*---------------------------------------*//*---------------------------------------*/
+
+#biome-img-2
+{
+    background-image: url("../pictures/desert_background.jpg");
+}
+#biome-img-3
+{
+    background-image: url("../pictures/Ocean_background.png");
+}
+#biome-img-4
+{
+    background-image: url("../pictures/jungle_background.jpg");
+}
+#biome-img-5
+{
+    background-image: url("../pictures/snow_background.JPG");
+}
+
+
+#biome-img-15
+{
+    background-image: url("../pictures/hallow_background2.jpg");
+}
+
+/*---------------------------------------*//*---------------------------------------*/
+
+.about-container
+{
+    padding: 30px 10%;
+}
+.about
+{
+    padding: 20px;
+    text-align: center;
+}
